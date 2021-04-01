@@ -85,7 +85,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
   }: UpdateProductAmount) => {
     try {
         if (amount <= 0) return;
-        
+
         const stockResponse = await api.get(`stock/${ productId }`);
 
         if (amount > stockResponse.data.amount) {
@@ -104,7 +104,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
             throw Error();
         }
     } catch {
-        toast.error('Erro na alteração de quantidade de produto');
+        toast.error('Erro na alteração da quantidade de produto');
     }
   };
 

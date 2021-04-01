@@ -343,7 +343,7 @@ describe('useCart Hook', () => {
     await waitFor(
       () => {
         expect(mockedToastError).toHaveBeenCalledWith(
-          'Erro na alteração de quantidade de produto'
+          'Erro na alteração da quantidade de produto'
         );
         expect(result.current.cart).toEqual(
           expect.arrayContaining(initialStoragedData)
